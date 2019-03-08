@@ -6,7 +6,194 @@
         xmlns:local="clr-namespace:MedAssist"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <TabControl>
+        <TabItem Header="General">
+            <Grid>
+                <Label Content="Welcome to MedAssist" />
+                <Image Source="/app_data/images/main.jpg" />
+            </Grid>
+        </TabItem>
+        <TabItem Header="Patient Info">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Column="1" Grid.Row="1">
+                    <TextBlock FontSize="20" FontWeight="Bold" >
+                        Private patient informations
+                    </TextBlock>
+                    <StackPanel Margin="0,10,0,0" >
+                        <WrapPanel>
+                            <Label Content="Name :"/>
+                            <Label Content="Ducry"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Label Content="First name :"/>
+                            <Label Content="David"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Label Content="Birth :"/>
+                            <Label Content="01/06/1986"/>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Label Content="Sexe :"/>
+                            <Label Content="Man"/>
+                        </WrapPanel>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="3" Grid.Row="1">
+                    <TextBlock FontSize="20" FontWeight="Bold" >
+                        History of treatments
+                    </TextBlock>
+                    <StackPanel Margin="0,10,0,0">
+                        <WrapPanel>
+                            <Label Content="Treatment 1" />
+                            <Label Content="11/04/2018" />
+                            <Label Content="18/04/2018" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Label Content="Treatment 2" />
+                            <Label Content="19/06/2018" />
+                            <Label Content="02/12/2018" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Label Content="Treatment 3" />
+                            <Label Content="09/08/2018" />
+                            <Label Content="12/01/2019" />
+                        </WrapPanel>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="3">
+                    <TextBlock FontSize="20" FontWeight="Bold" >
+                        Patient medical constraints
+                    </TextBlock>
+                    <StackPanel Margin="0,10,0,0">
+                        <WrapPanel>
+                            <Label Content="Treatment 1" />
+                            <Label Content="11/04/2018" />
+                            <Label Content="18/04/2018" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Label Content="Treatment 2" />
+                            <Label Content="19/06/2018" />
+                            <Label Content="02/12/2018" />
+                        </WrapPanel>
+                        <WrapPanel>
+                            <Label Content="Treatment 3" />
+                            <Label Content="09/08/2018" />
+                            <Label Content="12/01/2019" />
+                        </WrapPanel>
+                    </StackPanel>
+                </StackPanel>
+                <GridSplitter Grid.RowSpan="5" Grid.Column="2" Width="5" HorizontalAlignment="Stretch"/>
+                <GridSplitter Grid.ColumnSpan="5" Grid.Row="2" Height="5" HorizontalAlignment="Stretch"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Medical info">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <TabControl Grid.Column="1" Grid.Row="1">
+                    <TabItem Header="Current treatments">
+                        <StackPanel>
+                            <StackPanel.Resources>
+                                <Style TargetType="Label">
+                                    <Setter Property="FontSize" Value="20" />
+                                </Style>
+                            </StackPanel.Resources>
+                            <WrapPanel>
+                                <Label Content="CurrentTreatment1" />
+                                <Label Content="since 20 days" />
+                            </WrapPanel>
+                            <WrapPanel>
+                                <Label Content="CurrentTreatment2" />
+                                <Label Content="since 8 days" />
+                            </WrapPanel>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="Allergies">
+                        <WrapPanel>
+                            <WrapPanel.Resources>
+                                <Style TargetType="Label">
+                                    <Setter Property="FontSize" Value="24" />
+                                </Style>
+                            </WrapPanel.Resources>
+                            <Label Content="Peanuts"/>
+                            <Label Content="Ananas"/>
+                            <Label Content="Lactose"/>
+                            <Label Content="Bred"/>
+                            <Label Content="See fruits"/>
+                            <Label Content="Nuts"/>
+                            <Label Content="Product1"/>
+                            <Label Content="Product2"/>
+                            
+                        </WrapPanel>
+                    </TabItem>
+                    <TabItem Header="Other informations">
+                        <StackPanel>
+                            <StackPanel.Resources>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="FontSize" Value="20" />
+                                </Style>
+                            </StackPanel.Resources>
+                            <TextBlock>
+                                Knee operation in january 1993. For more information, contact Dr. MyDoctor2.
+                            </TextBlock>
+                            <TextBlock>
+                                Chronical eczema detected in october 1989. For more information, contact Dr. MyDoctor2.
+                            </TextBlock>
+                            <TextBlock>
+                                Subject to stress crisis.
+                            </TextBlock>
+
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+
+                <StackPanel Grid.Column="1" Grid.Row="3">
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Foreground" Value="Red" />
+                            <Setter Property="FontSize" Value="24" />
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock>
+                        You have to take 2 pills of medication1 in 30 minutes.
+                    </TextBlock>
+                    <TextBlock>
+                        You have to take 1 dose of medication2 in 2 hours.
+                    </TextBlock>
+                    <TextBlock>
+                        You have to take 2 pills of medication3 in 8 hours.
+                    </TextBlock>
+                    <TextBlock>
+                        You have to call Dr. Doctor in 13 hours.
+                    </TextBlock>
+                </StackPanel>
+
+                <GridSplitter Grid.ColumnSpan="3" Grid.Row="2" Height="5" HorizontalAlignment="Stretch"/>
+            </Grid>
+        </TabItem>
+    </TabControl>
 </Window>
